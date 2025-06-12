@@ -252,6 +252,9 @@ Players.PlayerAdded:Connect(function(Player)
 		}
 		local New_Table = Data_Table[Player.UserId]
 		setmetatable(New_Table, Function_Table)
+		--[[he Data is right above, however it's not being saved yet if I did save it I'd use
+		DataStoreService:GetDataStore("Player_Data"):GetAsync(key) ; to check data then
+		DataStoreService:GetDataStore("Player_Data"):SetAsync(key) ; to Save Data	--]]
 	end)
 end)
 
